@@ -1,8 +1,8 @@
-# ☀️ Weather Data Fetcher (날씨 정보 추출기)
+## ☀️ 실시간 위치 날씨 API 클라이언트
 
 특정 위도($\text{lat}$)와 경도($\text{lon}$)를 기반으로 **WeatherAPI.com**에서 현재 날씨 정보를 조회하고, 그 결과를 사용자에게 친숙한 한국어로 제공하는 간단한 Python 유틸리티입니다.
 
-## 🎯 프로젝트 배경 및 활용 (Context & Application)
+## 🎯 프로젝트 배경 및 활용
 
 이 프로젝트는 **테스트 업무**의 일환으로 진행되었으며, **지역 기반 데이터 호출 프로세스에 대한 심층적인 이해**를 목적으로 합니다.
 
@@ -73,7 +73,7 @@ else:
 ### 4. 실행 화면
 <img width="1309" height="626" alt="1" src="https://github.com/user-attachments/assets/d0790f1e-bee7-4a2e-bbf5-1d854035b5d4" />
 
-# 📝 코드 구성 요소 설명
+## 📝 코드 구성 요소 설명
 API_KEY : WeatherAPI 서버 인증에 사용되는 고유 키.
 
 classify_weather(text) : API 응답의 영어 날씨 상태를 '비', '눈', '맑음' 등의 한국어로 변환합니다.
