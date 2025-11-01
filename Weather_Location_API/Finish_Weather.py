@@ -2,7 +2,7 @@ import requests
 import json
 
 # WeatherAPI 키
-API_KEY = "0b54164b5cac4d88b6281309250405"  # 발급받은 API 키 입력
+API_KEY = ""  # 발급받은 API 키 입력
 
 
 # 날씨 상태에 대한 한글 번역 딕셔너리
