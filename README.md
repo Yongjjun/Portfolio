@@ -13,6 +13,6 @@
 ### 🔥 Key Projects
 
 - [**GUI Automation Tool**](./Admin_Automation) : 사내 어드민 인증 간소화를 위한 Python/Tkinter 기반 자동화 도구
-- [**WearOS Simulator**](./Weather_Location_API) : 날씨 API 데이터 흐름 분석 및 테스트 시뮬레이터
 - [**Jira Analysis Tool**](./Jira_Analytics) : 결함 키워드 분석 및 시각화(HTML) 도구
+- [**WearOS Simulator**](./Weather_Location_API) : 날씨 API 데이터 흐름 분석 및 테스트 시뮬레이터
 - [**협업을 위한 Git IDE 환경 표준화 가이드 Wiki 작성**](https://github.com/Yongjjun/Portfolio/wiki)
