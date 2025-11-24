@@ -15,18 +15,30 @@ stopwords = set([
 ]) # 불용어를 더 풍부하게 수정
 
 def analyze_keywords(descriptions):
+    okt = Okt() # 형태소 분석기 개체 생성
     words = []
     keyword_examples = {}
 
     for desc in descriptions:
-        cleaned = re.sub(r"[^가-힣0-9a-zA-Z ]", "", desc.lower())
-        words.extend([word for word in cleaned.split() if word not in stopwords and len(word) > 1])
+        # 특수문자 제거
+        cleaned = re.sub(r"[^가-힣0-9a-zA-Z ]", "", desc)
 
-        for word in set(cleaned.split()):
+        # 명사만 추출
+        nouns = okt.nouns(cleaned)
+
+        # 추출된 명사 리스트를 순회
+        for word in nouns:
             if word not in stopwords and len(word) > 1:
+                # [수정] 빈도 분석을 위해 words 리스트에 추가
+                words.append(word) 
+
+                # [수정] 예시 문장 저장 로직
                 if word not in keyword_examples:
                     keyword_examples[word] = []
-                keyword_examples[word].append(desc)
+                
+                # (옵션) 같은 문장이 중복해서 들어가는 것 방지
+                if desc not in keyword_examples[word]:
+                    keyword_examples[word].append(desc)
 
     freq = Counter(words)
 
