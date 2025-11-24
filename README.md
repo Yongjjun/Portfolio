@@ -1,7 +1,7 @@
 ### Hi there 👋 I'm Yongjun Chang
 **Technical QA Engineer**
 
-저는 비효율적인 프로세스를 **기술(Python/Automation)**과 **데이터(Data Analysis)**로 해결하는 것을 즐기는 QA 엔지니어입니다.
+저는 비효율적인 프로세스를 기술(Python/Automation)과 데이터(Data Analysis)로 해결하는 것을 즐기는 QA 엔지니어입니다.
 
 - 🔭 **Current Focus:** Test Automation, QA Process Optimization, AI-Assisted Testing
 - 🛠 **Tech Stack:**
