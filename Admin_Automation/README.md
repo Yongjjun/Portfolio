@@ -47,7 +47,11 @@ QA 업무 중 반복적으로 수행되는 **어드민 페이지 로그인 및 �
    python Portfolio_Admin_Automation.py
 
 ## 📷 프로그램 실행 화면
-<img width="471" height="318" alt="Imgae" src="https://github.com/user-attachments/assets/00e5e8a6-371c-424d-997d-a40eeb225ae3" />
+[LDAP 로그인 화면 및 메인 화면]
+
+<img width="512" height="390" alt="스크린샷 2025-11-25 오전 8 37 22" src="https://github.com/user-attachments/assets/4a1285fe-67b5-4304-9daf-70a832c74d64" />
+
+<img width="592" height="440" alt="스크린샷 2025-11-25 오전 8 38 40" src="https://github.com/user-attachments/assets/4b59863c-e004-4c20-89c2-136116bfcf7e" />
 
 ## 🧠 프로젝트 의의 & 성과
 1. 업무 효율성 극대화
