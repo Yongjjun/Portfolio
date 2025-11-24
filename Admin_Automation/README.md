@@ -37,7 +37,7 @@ GUI	| Tkinter
 1. ChromeDriver 설치
 자신의 Chrome 버전에 맞는 드라이버를 설치 후 PATH에 추가
 2. 의존성 설치
- pip install selenium pillow
+ pip install -r requirements.txt
 3. 실행
    python Portfolio_Admin_Automation.py
 
