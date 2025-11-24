@@ -34,7 +34,9 @@ python main.py
 ## 📈 결과 예시
 - 상위 10개 키워드에 해당하는 Jira 제목 노출 
 
-[키워드별로 관련 이슈를 그룹화하여 보여주는 상세 리포트 화면]
+[분석기를 통해 키워드별로 관련 이슈를 그룹화하여 보여주는 상세 리포트 화면]
+<img width="562" height="390" alt="스크린샷 2025-11-25 오전 8 35 08" src="https://github.com/user-attachments/assets/f5fb7efb-a7ad-4af0-bbb4-11b586ea1b7d" />
+
 <img width="597" height="735" alt="KakaoTalk_20251123_180451117" src="https://github.com/user-attachments/assets/4c0ddb20-02b8-439b-90de-f8c9f040fae1" />
 
 ## 🔒 보안 관련 참고
