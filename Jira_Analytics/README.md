@@ -6,23 +6,23 @@ Jira 이슈 데이터를 분석하여 리포트로 시각화하는 Python 자동
 - 이 툴을 통해 키워드 데이터를 근거로 결함 다발 영역에 탐색적 테스트 리소스를 집중 투입하여 효율성 증대
 
 ## 🚀 주요 기능
-📂 CSV 데이터 로드 | Jira 이슈 데이터를 CSV 형태로 불러옴
+- CSV 데이터 로드 | Jira 이슈 데이터를 CSV 형태로 불러옴
 
-🧹 데이터 전처리 | 불필요한 컬럼(불용어 제거(ex 노출, 현상 등) 및 Null, 중복 데이터 처리
+- 데이터 전처리 | 불필요한 컬럼(불용어 제거(ex 노출, 현상 등) 및 Null, 중복 데이터 처리
 
-🧠 키워드 분석 | 이슈 제목 및 본문 내 주요 키워드 빈도 분석
+- 키워드 분석 | 이슈 제목 및 본문 내 주요 키워드 빈도 분석
 
-📊 통계 시각화 | 이슈 유형, 우선순위, 담당자별 분포 분석
+- 통계 시각화 | 이슈 유형, 우선순위, 담당자별 분포 분석
 
-📝 HTML 리포트 생성 | 분석 결과를 자동으로 HTML 및 워드 클라우드로 저장 (예: reports/jira_report.html)
+- HTML 리포트 생성 | 분석 결과를 자동으로 HTML 및 워드 클라우드로 저장 (예: reports/jira_report.html)
 
 ## ⚙️ 기술 스택
 
-Language: Python 3.10+
+- Language: Python 3.10+
 
-Libraries: pandas, tkinter, matplotlib (optional)
+- Libraries: pandas, tkinter, matplotlib (optional)
 
-Packaging: PyInstaller (단일 실행 파일로 변환 가능)
+- Packaging: PyInstaller (단일 실행 파일로 변환 가능)
 
 ## 💡 실행 방법
 python main.py
