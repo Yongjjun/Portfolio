@@ -1,8 +1,8 @@
 # main_gui.py
 import customtkinter as ctk
 from PIL import Image, ImageTk
-from Finish_Map import get_map
-from Finish_Weather import get_weather
+from geocoding_api import get_coordinates
+from weather_api import get_weather
 from customtkinter import CTkImage
 import os
 import sys
@@ -60,7 +60,7 @@ def 조회():
         return
     label_info.pack_forget()
     try:
-        lat, lon, real_address = get_map(address)
+        lat, lon, real_address = get_coordinates(address)
 
         if lat and lon:
             weather_info = get_weather(lat, lon)
@@ -74,6 +74,7 @@ def 조회():
                     icon_image = Image.open(icon_img_name).resize((200, 200))
                     icon_ctk_image = CTkImage(light_image=icon_image, size=(200, 200))  # CTkImage로 설정
                     icon_label.configure(image=icon_ctk_image, text="")
+                    icon_label.configure(image=None, text="")
                     icon_label.image = icon_ctk_image  # CTkImage 객체를 저장
 
                 else:
