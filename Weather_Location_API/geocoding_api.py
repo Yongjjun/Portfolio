@@ -1,7 +1,7 @@
 # geocoding.py
 import requests
 
-def get_map(address):
+def get_coordinates(address):
     url = f"https://nominatim.openstreetmap.org/search?q={address}&format=json&addressdetails=1"
 
     headers = {
