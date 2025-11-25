@@ -74,7 +74,7 @@ def 조회():
                     icon_image = Image.open(icon_img_name).resize((200, 200))
                     icon_ctk_image = CTkImage(light_image=icon_image, size=(200, 200))  # CTkImage로 설정
                     icon_label.configure(image=icon_ctk_image, text="")
-                    icon_label.configure(image=None, text="")
+                    icon_label.configure(text="")
                     icon_label.image = icon_ctk_image  # CTkImage 객체를 저장
 
                 else:
@@ -92,8 +92,9 @@ def 조회():
         label_result.configure(text=f"⚠️ 오류 발생: {str(e)}")
 
 # 돋보기 아이콘 버튼
-if os.path.exists("search_icon.png"):
-    search_img = Image.open("search_icon.png").resize((20, 20))
+search_icon_path = os.path.join(image_folder, "search_icon.png")
+if os.path.exists(search_icon_path):
+    search_img = Image.open(search_icon_path).resize((20, 20))
     search_photo = ImageTk.PhotoImage(search_img)
     search_btn = ctk.CTkButton(input_frame, image=search_photo, text="🔍 검색", width=30, command=조회)
     search_btn.pack(side="left")
