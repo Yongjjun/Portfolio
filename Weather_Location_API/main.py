@@ -53,7 +53,7 @@ entry.pack(side="left", padx=5)
 image_folder = os.path.join(app_path, "images")  # images 폴더 경로
 
 # 아이콘 버튼
-def 조회():
+def search_weather():
     address = entry.get()
     if not address:
         label_result.configure(text="⚠️ 주소를 입력해주세요.")
@@ -96,10 +96,10 @@ search_icon_path = os.path.join(image_folder, "search_icon.png")
 if os.path.exists(search_icon_path):
     search_img = Image.open(search_icon_path).resize((20, 20))
     search_photo = ImageTk.PhotoImage(search_img)
-    search_btn = ctk.CTkButton(input_frame, image=search_photo, text="🔍 검색", width=30, command=조회)
+    search_btn = ctk.CTkButton(input_frame, image=search_photo, text="🔍 검색", width=30, command=search_weather)
     search_btn.pack(side="left")
 else:
-    search_btn = ctk.CTkButton(input_frame, text="🔍 검색", command=조회)
+    search_btn = ctk.CTkButton(input_frame, text="🔍 검색", command=search_weather)
     search_btn.pack(side="left")
 
 # 초기 안내 문구 라벨 (결과 라벨 위쪽에)
