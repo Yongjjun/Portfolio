@@ -38,6 +38,8 @@ WeatherAPI.com에 접속하여 계정을 생성하고 API Key를 발급받으세
 
 제공된 코드 파일에서 API_KEY 변수에 발급받은 키를 입력해야 합니다.
 
+⚠️ Security Tip: 실제 프로젝트에서는 API Key를 코드에 직접 입력하지 않고 .env 파일이나 환경 변수로 관리하여 보안을 유지해야 합니다. (본 코드는 포트폴리오용 데모이므로 변수 처리하였습니다.)
+
 ```
 # Finish_Weather.py 파일 내
 API_KEY = "여기에 발급받은 실제 API 키를 입력하세요"
@@ -81,3 +83,4 @@ classify_weather(text) : API 응답의 영어 날씨 상태를 '비', '눈', '�
 get_weather(lat, lon) : 핵심 로직으로, API 요청, 응답 처리, 데이터 추출 및 오류 처리를 모두 담당하여 최종 결과를 반환합니다.
 
 requests, json : HTTP 요청 및 JSON 데이터 처리를 위한 표준 라이브러리입니다.
+
