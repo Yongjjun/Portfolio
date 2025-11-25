@@ -75,12 +75,12 @@ else:
 ### 4. 실행 화면
 <img width="1309" height="626" alt="1" src="https://github.com/user-attachments/assets/d0790f1e-bee7-4a2e-bbf5-1d854035b5d4" />
 
-## 📝 코드 구성 요소 설명
-API_KEY : WeatherAPI 서버 인증에 사용되는 고유 키.
+### 📝 코드 구성 요소 설명
 
-classify_weather(text) : API 응답의 영어 날씨 상태를 '비', '눈', '맑음' 등의 한국어로 변환합니다.
-
-get_weather(lat, lon) : 핵심 로직으로, API 요청, 응답 처리, 데이터 추출 및 오류 처리를 모두 담당하여 최종 결과를 반환합니다.
-
-requests, json : HTTP 요청 및 JSON 데이터 처리를 위한 표준 라이브러리입니다.
+| 파일/함수명 | 역할 및 설명 |
+| :--- | :--- |
+| **`API_KEY`** | WeatherAPI 서버 인증에 사용되는 고유 키 (보안상 제외됨) |
+| **`get_weather(lat, lon)`** | 위경도(`lat`, `lon`) 기반 API 호출 및 데이터 파싱을 담당하는 핵심 로직 |
+| **`classify_weather(text)`** | 영문 날씨 상태(Clear, Rain 등)를 한국어(맑음, 비)로 변환 |
+| **`requests`** | HTTP 통신 및 JSON 데이터 처리를 위한 표준 라이브러리 |
 
