@@ -53,7 +53,7 @@ def login_to_site(driver, site_url, username, password):
             driver.find_element(By.ID, 'login_form_password').send_keys(password)
             driver.find_element(By.NAME, 'commit').click()
 
-        # 로그인 후 처리를 위한 짧은 대기 (실제 환경에서는 특정 요소 대기로 변경 권장)
+        # 로그인 후 처리를 위한 짧은 대기
         time.sleep(1)
         
         if "Login failed" in driver.page_source:
