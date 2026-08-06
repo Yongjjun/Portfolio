@@ -1,12 +1,12 @@
-| Rule                  | Trigger                                 | Purpose                          | Generated Test                                          |
-| --------------------- | --------------------------------------- | -------------------------------- | ------------------------------------------------------- |
-| Validation            | 입력 필드가 존재하는 경우                          | 입력값의 무결성을 검증하여 기본적인 기능 정상 동작을 보장 | Required, Format, Length, Invalid Character             |
-| Boundary Value        | 최소/최대 길이 또는 범위 제한이 존재하는 경우              | 경계 조건에서 발생하기 쉬운 결함을 발견           | Min-1, Min, Min+1, Max-1, Max, Max+1                    |
-| Equivalence Partition | 입력값의 유효/무효 그룹을 구분할 수 있는 경우              | 동일한 특성을 가진 입력을 그룹화하여 효율적인 테스트 수행 | Valid Group, Invalid Group                              |
-| Negative Test         | 사용자 입력 또는 예외 상황이 존재하는 경우                | 비정상 입력 및 예외 처리 로직 검증             | Empty, NULL, Special Character, Invalid Value           |
-| Business Rule         | 업무 정책이나 제약 조건이 존재하는 경우                  | 요구사항에 정의된 비즈니스 정책 준수 여부 검증       | Age Restriction, Duplicate Check, Permission Validation |
-| State Transition      | 기능의 상태가 변경되는 경우                         | 상태 변화에 따른 시스템 동작을 검증             | Login → Logout, Draft → Publish                         |
-| Regression            | 다른 기능에 영향을 줄 수 있는 변경 사항이 존재하는 경우        | 변경으로 인한 기존 기능 영향 범위를 확인          | Related Feature Recommendation                          |
-| Platform              | Web, Android, iOS, TV 등 여러 플랫폼을 지원하는 경우 | 플랫폼별 동작 및 UI 일관성 검증              | Cross Platform Scenario                                 |
-| Accessibility         | 접근성 기능을 지원하는 경우                         | 다양한 사용 환경에서도 서비스를 사용할 수 있는지 검증   | Screen Reader, Keyboard Navigation                      |
-| Security              | 인증, 권한, 개인정보, 입력값 처리가 존재하는 경우           | 보안 취약점 및 권한 검증                   | SQL Injection, XSS, Authentication, Authorization       |
+| Rule                      | Trigger (언제 적용?)                              | Purpose (목적)                      | Generated Test (생성 테스트)                                                 | Priority |
+| ------------------------- | --------------------------------------------- | --------------------------------- | ----------------------------------------------------------------------- | :------: |
+| **Validation**            | 사용자의 입력(Input Field)이 존재하는 경우                 | 입력값의 형식과 무결성을 검증하여 기본 기능의 안정성을 확보 | 필수 입력(Required), 형식 검증(Format), 길이 검증(Length), 허용 문자(Allowed Character) |   ⭐⭐⭐⭐⭐  |
+| **Boundary Value**        | 최소/최대 길이, 수량, 범위 제한이 존재하는 경우                  | 경계 조건에서 발생하기 쉬운 결함을 탐지            | 최소-1, 최소, 최소+1, 최대-1, 최대, 최대+1                                          |   ⭐⭐⭐⭐⭐  |
+| **Equivalence Partition** | 입력값을 유효/무효 그룹으로 구분할 수 있는 경우                   | 대표값만 테스트하여 효율적으로 품질을 검증           | 정상 그룹(Valid Input), 비정상 그룹(Invalid Input)                               |   ⭐⭐⭐⭐   |
+| **Negative Test**         | 예외 상황 또는 잘못된 사용자 입력이 가능한 경우                   | 오류 처리 및 예외 처리 로직을 검증              | 공백 입력, NULL, 특수문자, 잘못된 형식, 예상하지 못한 입력                                   |   ⭐⭐⭐⭐⭐  |
+| **Business Rule**         | 정책, 제약사항, 업무 규칙이 존재하는 경우                      | 요구사항에 정의된 비즈니스 정책이 올바르게 동작하는지 검증  | 권한 검증, 중복 검사, 연령 제한, 가입 조건, 결제 정책                                       |   ⭐⭐⭐⭐⭐  |
+| **State Transition**      | 기능의 상태(State)가 변경되는 경우                        | 상태 변화에 따른 시스템 동작을 검증              | 로그인→로그아웃, 주문→결제완료, 임시저장→게시                                              |   ⭐⭐⭐⭐   |
+| **Regression**            | 기능 변경 또는 신규 기능 추가가 있는 경우                      | 변경 사항이 기존 기능에 미치는 영향을 확인          | 영향 기능 추천, 회귀 테스트 대상 추천                                                  |   ⭐⭐⭐⭐⭐  |
+| **Platform**              | Web, Android, iOS, Smart TV 등 여러 플랫폼을 지원하는 경우 | 플랫폼 간 동작 및 UI 일관성을 검증             | 플랫폼별 기능 비교, UI 비교, OS별 동작 확인                                            |    ⭐⭐⭐   |
+| **Accessibility**         | 접근성 기능을 지원해야 하는 경우                            | 다양한 사용 환경에서도 서비스를 사용할 수 있도록 검증    | VoiceOver, TalkBack, 키보드 탐색, 명암 대비                                      |    ⭐⭐⭐   |
+| **Security**              | 인증, 권한, 개인정보, 입력값 처리가 포함된 경우                  | 보안 취약점 및 권한 검증                    | 인증(Authentication), 권한(Authorization), SQL Injection, XSS, 세션 검증        |   ⭐⭐⭐⭐⭐  |
