@@ -14,6 +14,9 @@ if rules:
 
         print(f"\n✅ {rule}")
 
+        print("\n판단 근거:")
+        print(rule_info["reason"])
+
         print("\n목적:")
         print(rule_info["purpose"])
 
