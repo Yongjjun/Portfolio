@@ -47,3 +47,20 @@ QA Rule Detector의 Rule Detection 성능을 평가하기 위한
 | TC-018 | 화면 크기가 달라져도 주요 기능을 동일하게 사용할 수 있어야 한다. | Platform, Accessibility |
 | TC-019 | 기존 회원의 프로필 변경 이후 관련 화면에서도 변경된 정보가 동일하게 표시되어야 한다. | Regression |
 | TC-020 | 사용자가 이전 단계로 돌아간 후 다시 다음 단계로 이동해도 입력한 정보가 유지되어야 한다. | State Transition, Validation |
+
+## Baseline Evaluation
+
+### Keyword-based Rule Detector
+
+- Total Cases: 20
+- Exact Match: 3
+- Failed Cases: 17
+- Exact Match Accuracy: 15%
+
+### Observations
+
+1. Keyword가 직접적으로 포함된 단순 요구사항은 정상적으로 탐지하는 경향이 있음.
+2. 하나의 요구사항에 여러 QA Rule이 존재할 경우 불필요한 Rule이 추가되는 문제가 발생함.
+3. 동일한 키워드가 문맥에 따라 다른 Rule을 의미하는 경우 오탐이 발생함.
+4. 요구사항에 Rule을 나타내는 명시적 키워드가 없는 경우 Rule을 탐지하지 못하는 문제가 발생함.
+5. 요구사항의 의미와 QA 관점을 판단하는 데 Keyword Matching만으로는 한계가 존재함.
