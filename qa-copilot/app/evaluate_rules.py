@@ -113,13 +113,14 @@ def evaluate_case(case):
 
     return expected == actual
 
-for case in TEST_DATASET:
-    result = evaluate_case(case)
+if __name__ == "__main__":
+    for case in TEST_DATASET:
+        result = evaluate_case(case)
 
-    status = "PASS" if result else "FAIL"
+        status = "PASS" if result else "FAIL"
 
-    print(
-        f"{case['id']} | {status} | "
-        f"Expected: {case['expected']} | "
-        f"Actual: {detect_rules(case['requirement'])}"
-    )
+        print(
+            f"{case['id']} | {status} | "
+            f"Expected: {case['expected']} | "
+            f"Actual: {detect_rules(case['requirement'])}"
+        )
