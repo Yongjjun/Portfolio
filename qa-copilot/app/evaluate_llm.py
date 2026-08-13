@@ -48,6 +48,10 @@ def evaluate_llm():
 
         try:
             result = analyze_requirement(case["requirement"])
+
+            print("RAW RESULT:")
+            print(result)
+
             actual = [item["rule"] for item in result]
 
             metrics = calculate_metrics(
@@ -64,32 +68,48 @@ def evaluate_llm():
             results.append(metrics)
 
         except Exception as e:
-            print(f"ERROR: {e}")
+            print(f"ERROR TYPE : {type(e).__name__}")
+            print(f"ERROR      : {e}")
+
+            results.append({
+                "precision": 0,
+                "recall": 0,
+                "f1": 0,
+                "exact_match": False,
+                "error": True,
+            })
 
     if results:
+        total_cases = len(TEST_DATASET)
+
         avg_precision = sum(
             result["precision"] for result in results
-        ) / len(results)
+        ) / total_cases
 
         avg_recall = sum(
             result["recall"] for result in results
-        ) / len(results)
+        ) / total_cases
 
         avg_f1 = sum(
             result["f1"] for result in results
-        ) / len(results)
+        ) / total_cases
 
         exact_matches = sum(
             result["exact_match"] for result in results
+        )
+
+        errors = sum(
+            result.get("error", False) for result in results
         )
 
         print("\n" + "=" * 80)
         print("Gemini Evaluation Summary")
         print("=" * 80)
 
-        print(f"Total Cases     : {len(results)}")
-        print(f"Exact Match     : {exact_matches}/{len(results)}")
-        print(f"Exact Match     : {exact_matches / len(results):.2%}")
+        print(f"Total Cases      : {total_cases}")
+        print(f"Evaluation Errors: {errors}")
+        print(f"Exact Match      : {exact_matches}/{total_cases}")
+        print(f"Exact Match      : {exact_matches / total_cases:.2%}")
         print(f"Average Precision: {avg_precision:.2%}")
         print(f"Average Recall   : {avg_recall:.2%}")
         print(f"Average F1 Score : {avg_f1:.2%}")
