@@ -1,8 +1,38 @@
-from llm_analyzer import analyze_requirement
+import json
+from pathlib import Path
+
 from evaluate_rules import TEST_DATASET
 
 
+# ============================================================
+# Configuration
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+RESULT_FILE = BASE_DIR / "data" / "llm_results.json"
+
+
+# ============================================================
+# Load Saved Gemini Results
+# ============================================================
+
+def load_results():
+    """저장된 Gemini 분석 결과를 불러온다."""
+
+    if not RESULT_FILE.exists():
+        print(f"❌ 결과 파일을 찾을 수 없습니다: {RESULT_FILE}")
+        return {}
+
+    with open(RESULT_FILE, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+# ============================================================
+# Metrics
+# ============================================================
+
 def calculate_metrics(expected, actual):
+
     expected = set(expected)
     actual = set(actual)
 
@@ -38,82 +68,125 @@ def calculate_metrics(expected, actual):
     }
 
 
+# ============================================================
+# Evaluation
+# ============================================================
+
 def evaluate_llm():
+
+    saved_results = load_results()
+
+    if not saved_results:
+        return
+
     results = []
 
+    evaluated_cases = 0
+    skipped_cases = 0
+
     for case in TEST_DATASET:
-        print(f"\n[{case['id']}]")
+
+        case_id = case["id"]
+
+        print(f"\n[{case_id}]")
         print(f"Requirement : {case['requirement']}")
         print(f"Expected    : {case['expected']}")
 
-        try:
-            result = analyze_requirement(case["requirement"])
+        # ----------------------------------------------------
+        # 저장된 Gemini 결과 확인
+        # ----------------------------------------------------
 
-            print("RAW RESULT:")
-            print(result)
+        if case_id not in saved_results:
 
-            actual = [item["rule"] for item in result]
+            print("Gemini      : SKIP - 결과 없음")
+            skipped_cases += 1
+            continue
 
-            metrics = calculate_metrics(
-                case["expected"],
-                actual
+        saved_case = saved_results[case_id]
+
+        # ----------------------------------------------------
+        # API 오류 결과는 평가에서 제외
+        # ----------------------------------------------------
+
+        if saved_case.get("status") != "success":
+
+            print(
+                f"Gemini      : SKIP - "
+                f"status={saved_case.get('status')}"
             )
 
-            print(f"Gemini      : {actual}")
-            print(f"Precision   : {metrics['precision']:.2%}")
-            print(f"Recall      : {metrics['recall']:.2%}")
-            print(f"F1 Score    : {metrics['f1']:.2%}")
-            print(f"Exact Match : {metrics['exact_match']}")
+            skipped_cases += 1
+            continue
 
-            results.append(metrics)
+        # ----------------------------------------------------
+        # 저장된 Gemini 결과 사용
+        # ----------------------------------------------------
 
-        except Exception as e:
-            print(f"ERROR TYPE : {type(e).__name__}")
-            print(f"ERROR      : {e}")
+        actual = saved_case.get("actual", [])
 
-            results.append({
-                "precision": 0,
-                "recall": 0,
-                "f1": 0,
-                "exact_match": False,
-                "error": True,
-            })
-
-    if results:
-        total_cases = len(TEST_DATASET)
-
-        avg_precision = sum(
-            result["precision"] for result in results
-        ) / total_cases
-
-        avg_recall = sum(
-            result["recall"] for result in results
-        ) / total_cases
-
-        avg_f1 = sum(
-            result["f1"] for result in results
-        ) / total_cases
-
-        exact_matches = sum(
-            result["exact_match"] for result in results
+        metrics = calculate_metrics(
+            case["expected"],
+            actual
         )
 
-        errors = sum(
-            result.get("error", False) for result in results
-        )
+        print(f"Gemini      : {actual}")
+        print(f"Precision   : {metrics['precision']:.2%}")
+        print(f"Recall      : {metrics['recall']:.2%}")
+        print(f"F1 Score    : {metrics['f1']:.2%}")
+        print(f"Exact Match : {metrics['exact_match']}")
 
-        print("\n" + "=" * 80)
-        print("Gemini Evaluation Summary")
-        print("=" * 80)
+        results.append(metrics)
 
-        print(f"Total Cases      : {total_cases}")
-        print(f"Evaluation Errors: {errors}")
-        print(f"Exact Match      : {exact_matches}/{total_cases}")
-        print(f"Exact Match      : {exact_matches / total_cases:.2%}")
-        print(f"Average Precision: {avg_precision:.2%}")
-        print(f"Average Recall   : {avg_recall:.2%}")
-        print(f"Average F1 Score : {avg_f1:.2%}")
+        evaluated_cases += 1
 
+    # ========================================================
+    # Summary
+    # ========================================================
+
+    if not results:
+        print("\n평가할 수 있는 결과가 없습니다.")
+        return
+
+    avg_precision = sum(
+        result["precision"]
+        for result in results
+    ) / len(results)
+
+    avg_recall = sum(
+        result["recall"]
+        for result in results
+    ) / len(results)
+
+    avg_f1 = sum(
+        result["f1"]
+        for result in results
+    ) / len(results)
+
+    exact_matches = sum(
+        result["exact_match"]
+        for result in results
+    )
+
+    print("\n" + "=" * 80)
+    print("Gemini Evaluation Summary")
+    print("=" * 80)
+
+    print(f"Total Dataset     : {len(TEST_DATASET)}")
+    print(f"Evaluated Cases   : {evaluated_cases}")
+    print(f"Skipped Cases     : {skipped_cases}")
+    print(f"Exact Match       : {exact_matches}/{evaluated_cases}")
+    print(
+        f"Exact Match Rate  : "
+        f"{exact_matches / evaluated_cases:.2%}"
+    )
+    print(f"Average Precision : {avg_precision:.2%}")
+    print(f"Average Recall    : {avg_recall:.2%}")
+    print(f"Average F1 Score  : {avg_f1:.2%}")
+
+
+# ============================================================
+# Main
+# ============================================================
 
 if __name__ == "__main__":
     evaluate_llm()

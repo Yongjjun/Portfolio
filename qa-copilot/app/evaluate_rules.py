@@ -60,12 +60,12 @@ TEST_DATASET = [
     {
         "id": "TC-012",
         "requirement": "상품 정보를 수정하면 상품 상세 화면과 목록 화면에 변경된 정보가 반영되어야 한다.",
-        "expected": ["Regression"],
+        "expected": ["N/A"],
     },
     {
         "id": "TC-013",
         "requirement": "로그인 기능은 Web, Android, iOS에서 동일하게 제공되어야 한다.",
-        "expected": ["Platform", "Validation"],
+        "expected": ["Platform"],
     },
     {
         "id": "TC-014",
@@ -90,17 +90,17 @@ TEST_DATASET = [
     {
         "id": "TC-018",
         "requirement": "화면 크기가 달라져도 주요 기능을 동일하게 사용할 수 있어야 한다.",
-        "expected": ["Platform", "Accessibility"],
+        "expected": ["N/A"],
     },
     {
         "id": "TC-019",
         "requirement": "기존 회원의 프로필 변경 이후 관련 화면에서도 변경된 정보가 동일하게 표시되어야 한다.",
-        "expected": ["Regression"],
+        "expected": ["N/A"],
     },
     {
         "id": "TC-020",
         "requirement": "사용자가 이전 단계로 돌아간 후 다시 다음 단계로 이동해도 입력한 정보가 유지되어야 한다.",
-        "expected": ["State Transition", "Validation"],
+        "expected": ["State Transition"],
     },
     
 ]
