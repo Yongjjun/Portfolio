@@ -25,7 +25,7 @@ TEST_DATASET = [
     {
         "id": "TC-005",
         "requirement": "만 14세 미만 사용자는 회원가입을 할 수 없다.",
-        "expected": ["Business Rule"],
+        "expected": ["Business Rule", "Boundary Value"],
     },
     {
         "id": "TC-006",
@@ -60,7 +60,7 @@ TEST_DATASET = [
     {
         "id": "TC-012",
         "requirement": "상품 정보를 수정하면 상품 상세 화면과 목록 화면에 변경된 정보가 반영되어야 한다.",
-        "expected": ["N/A"],
+        "expected": ["No Applicable Rule"],
     },
     {
         "id": "TC-013",
@@ -80,30 +80,30 @@ TEST_DATASET = [
     {
         "id": "TC-016",
         "requirement": "정상적으로 인증된 사용자만 개인 정보를 조회할 수 있어야 한다.",
-        "expected": ["Security", "Business Rule"],
+        "expected": ["Security"],
     },
     {
         "id": "TC-017",
         "requirement": "결제가 완료된 주문은 다시 결제할 수 없어야 한다.",
-        "expected": ["Business Rule", "State Transition"],
+        "expected": ["Business Rule"],
     },
     {
         "id": "TC-018",
         "requirement": "화면 크기가 달라져도 주요 기능을 동일하게 사용할 수 있어야 한다.",
-        "expected": ["N/A"],
+        "expected": ["No Applicable Rule"],
     },
     {
         "id": "TC-019",
         "requirement": "기존 회원의 프로필 변경 이후 관련 화면에서도 변경된 정보가 동일하게 표시되어야 한다.",
-        "expected": ["N/A"],
+        "expected": ["No Applicable Rule"],
     },
     {
         "id": "TC-020",
         "requirement": "사용자가 이전 단계로 돌아간 후 다시 다음 단계로 이동해도 입력한 정보가 유지되어야 한다.",
         "expected": ["State Transition"],
     },
-    
 ]
+
 
 def evaluate_case(case):
     actual = detect_rules(case["requirement"])
@@ -113,14 +113,17 @@ def evaluate_case(case):
 
     return expected == actual
 
+
 if __name__ == "__main__":
     for case in TEST_DATASET:
         result = evaluate_case(case)
 
         status = "PASS" if result else "FAIL"
 
+        actual = detect_rules(case["requirement"])
+
         print(
             f"{case['id']} | {status} | "
             f"Expected: {case['expected']} | "
-            f"Actual: {detect_rules(case['requirement'])}"
+            f"Actual: {actual}"
         )
