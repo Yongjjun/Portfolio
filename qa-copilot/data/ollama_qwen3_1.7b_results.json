@@ -1,0 +1,14 @@
+{
+  "TC-001": {
+    "model": "qwen3:1.7b",
+    "requirement": "비밀번호는 최소 8자 이상이어야 한다.",
+    "expected": [
+      "Boundary Value"
+    ],
+    "actual": [],
+    "elapsed_seconds": 29.0,
+    "status": "http_error",
+    "http_code": 500,
+    "error": "{\"error\":\"an error was encountered while running the model: read tcp 127.0.0.1:13721-\\u003e127.0.0.1:13640: wsarecv: An existing connection was forcibly closed by the remote host.\"}"
+  }
+}

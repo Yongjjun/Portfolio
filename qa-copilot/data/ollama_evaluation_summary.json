@@ -1,0 +1,193 @@
+{
+  "provider": "ollama",
+  "total_cases": 20,
+  "executed_cases": 20,
+  "success_cases": 20,
+  "failed_cases": 0,
+  "not_executed_cases": 0,
+  "exact_match": 13,
+  "over_selection": 0,
+  "under_selection": 5,
+  "mixed_error": 2,
+  "exact_accuracy": 0.65,
+  "precision": 0.9047619047619048,
+  "recall": 0.7307692307692307,
+  "f1": 0.8085106382978723,
+  "tp": 19,
+  "fp": 2,
+  "fn": 7,
+  "latency": {
+    "count": 20,
+    "average_seconds": 6.9719,
+    "min_seconds": 4.584,
+    "max_seconds": 14.918
+  },
+  "difficulty": {
+    "Easy": {
+      "total": 6,
+      "success": 6,
+      "failed": 0,
+      "not_executed": 0,
+      "exact": 5,
+      "over_selection": 0,
+      "under_selection": 0,
+      "mixed_error": 1,
+      "tp": 5,
+      "fp": 1,
+      "fn": 1,
+      "exact_accuracy": 0.8333333333333334,
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1": 0.8333333333333334
+    },
+    "Medium": {
+      "total": 9,
+      "success": 9,
+      "failed": 0,
+      "not_executed": 0,
+      "exact": 4,
+      "over_selection": 0,
+      "under_selection": 5,
+      "mixed_error": 0,
+      "tp": 9,
+      "fp": 0,
+      "fn": 5,
+      "exact_accuracy": 0.4444444444444444,
+      "precision": 1.0,
+      "recall": 0.6428571428571429,
+      "f1": 0.782608695652174
+    },
+    "Hard": {
+      "total": 5,
+      "success": 5,
+      "failed": 0,
+      "not_executed": 0,
+      "exact": 4,
+      "over_selection": 0,
+      "under_selection": 0,
+      "mixed_error": 1,
+      "tp": 5,
+      "fp": 1,
+      "fn": 1,
+      "exact_accuracy": 0.8,
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1": 0.8333333333333334
+    }
+  },
+  "composition": {
+    "single": {
+      "total": 14,
+      "success": 14,
+      "exact": 12,
+      "exact_accuracy": 0.8571428571428571
+    },
+    "multi": {
+      "total": 6,
+      "success": 6,
+      "exact": 1,
+      "exact_accuracy": 0.16666666666666666
+    }
+  },
+  "rules": {
+    "Validation": {
+      "expected_count": 5,
+      "selected_count": 6,
+      "correct_count": 5,
+      "missing_count": 0,
+      "extra_count": 1,
+      "precision": 0.8333333333333334,
+      "recall": 1.0
+    },
+    "Boundary Value": {
+      "expected_count": 3,
+      "selected_count": 0,
+      "correct_count": 0,
+      "missing_count": 3,
+      "extra_count": 0,
+      "precision": 0,
+      "recall": 0.0
+    },
+    "Equivalence Partition": {
+      "expected_count": 0,
+      "selected_count": 0,
+      "correct_count": 0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "precision": 0,
+      "recall": 0
+    },
+    "Negative Test": {
+      "expected_count": 5,
+      "selected_count": 3,
+      "correct_count": 3,
+      "missing_count": 2,
+      "extra_count": 0,
+      "precision": 1.0,
+      "recall": 0.6
+    },
+    "Business Rule": {
+      "expected_count": 4,
+      "selected_count": 3,
+      "correct_count": 3,
+      "missing_count": 1,
+      "extra_count": 0,
+      "precision": 1.0,
+      "recall": 0.75
+    },
+    "State Transition": {
+      "expected_count": 3,
+      "selected_count": 4,
+      "correct_count": 3,
+      "missing_count": 0,
+      "extra_count": 1,
+      "precision": 0.75,
+      "recall": 1.0
+    },
+    "Regression": {
+      "expected_count": 0,
+      "selected_count": 0,
+      "correct_count": 0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "precision": 0,
+      "recall": 0
+    },
+    "Platform": {
+      "expected_count": 2,
+      "selected_count": 2,
+      "correct_count": 2,
+      "missing_count": 0,
+      "extra_count": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "Accessibility": {
+      "expected_count": 0,
+      "selected_count": 0,
+      "correct_count": 0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "precision": 0,
+      "recall": 0
+    },
+    "Security": {
+      "expected_count": 1,
+      "selected_count": 1,
+      "correct_count": 1,
+      "missing_count": 0,
+      "extra_count": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "No Applicable Rule": {
+      "expected_count": 3,
+      "selected_count": 2,
+      "correct_count": 2,
+      "missing_count": 1,
+      "extra_count": 0,
+      "precision": 1.0,
+      "recall": 0.6666666666666666
+    }
+  }
+}

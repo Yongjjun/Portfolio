@@ -1,0 +1,74 @@
+{
+  "TC-001": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed",
+    "requirement": "비밀번호는 최소 8자 이상이어야 한다.",
+    "expected": [
+      "Boundary Value"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Boundary Value"
+    ],
+    "rules": [
+      {
+        "rule": "Boundary Value",
+        "reason": "명시적인 최소값 경계 조건이 있기 때문",
+        "confidence": 0.95
+      }
+    ],
+    "actual": [
+      "Boundary Value"
+    ],
+    "elapsed_seconds": 14.196,
+    "status": "success"
+  },
+  "TC-002": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed",
+    "requirement": "이메일 주소는 올바른 형식으로 입력해야 한다.",
+    "expected": [
+      "Validation"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Validation"
+    ],
+    "rules": [
+      {
+        "rule": "Boundary Value",
+        "reason": "이메일 주소 형식의 최소값 경계 조건이 명시되어 있음",
+        "confidence": 0.95
+      }
+    ],
+    "actual": [
+      "Boundary Value"
+    ],
+    "elapsed_seconds": 5.87,
+    "status": "success"
+  },
+  "TC-003": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed",
+    "requirement": "이름은 필수 입력 항목이다.",
+    "expected": [
+      "Validation"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Validation"
+    ],
+    "rules": [
+      {
+        "rule": "Boundary Value",
+        "reason": "명시적인 최소값 경계 조건이 있기 때문",
+        "confidence": 0.95
+      }
+    ],
+    "actual": [
+      "Boundary Value"
+    ],
+    "elapsed_seconds": 5.315,
+    "status": "success"
+  }
+}

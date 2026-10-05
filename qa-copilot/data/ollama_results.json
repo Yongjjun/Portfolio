@@ -1,0 +1,53 @@
+{
+  "TC-001": {
+    "model": "qwen3:1.7b",
+    "requirement": "비밀번호는 최소 8자 이상이어야 한다.",
+    "expected": [
+      "Boundary Value"
+    ],
+    "actual": [],
+    "status": "connection_error",
+    "error": "HTTP Error 500: Internal Server Error"
+  },
+  "TC-002": {
+    "model": "qwen3:1.7b",
+    "requirement": "이메일 주소는 올바른 형식으로 입력해야 한다.",
+    "expected": [
+      "Validation"
+    ],
+    "actual": [],
+    "status": "connection_error",
+    "error": "HTTP Error 500: Internal Server Error"
+  },
+  "TC-003": {
+    "model": "qwen3:1.7b",
+    "requirement": "이름은 필수 입력 항목이다.",
+    "expected": [
+      "Validation"
+    ],
+    "actual": [],
+    "status": "connection_error",
+    "error": "HTTP Error 500: Internal Server Error"
+  },
+  "TC-004": {
+    "model": "qwen3:4b",
+    "requirement": "Android와 iOS에서 동일한 기능을 제공해야 한다.",
+    "expected": [
+      "Platform"
+    ],
+    "actual": [],
+    "status": "connection_error",
+    "error": "HTTP Error 500: Internal Server Error"
+  },
+  "TC-005": {
+    "model": "qwen3:4b",
+    "requirement": "만 14세 미만 사용자는 회원가입을 할 수 없다.",
+    "expected": [
+      "Business Rule",
+      "Boundary Value"
+    ],
+    "actual": [],
+    "status": "connection_error",
+    "error": "HTTP Error 500: Internal Server Error"
+  }
+}

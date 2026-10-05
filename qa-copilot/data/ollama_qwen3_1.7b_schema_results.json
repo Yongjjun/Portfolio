@@ -1,0 +1,500 @@
+{
+  "TC-001": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "비밀번호는 최소 8자 이상이어야 한다.",
+    "expected": [
+      "Boundary Value"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Boundary Value"
+    ],
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "비밀번호의 형식(최소 8자)을 검증하는 것은 입력값의 형식을 검증하는 경우에 해당합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "elapsed_seconds": 14.918,
+    "status": "success"
+  },
+  "TC-002": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "이메일 주소는 올바른 형식으로 입력해야 한다.",
+    "expected": [
+      "Validation"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Validation"
+    ],
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "이메일 형식 검증은 입력값의 형식을 검증하는 데 해당합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "elapsed_seconds": 5.342,
+    "status": "success"
+  },
+  "TC-003": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "이름은 필수 입력 항목이다.",
+    "expected": [
+      "Validation"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Validation"
+    ],
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "이름 필수 입력 여부는 입력값의 필수 여부를 검증하는 데 해당합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "elapsed_seconds": 5.289,
+    "status": "success"
+  },
+  "TC-004": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "Android와 iOS에서 동일한 기능을 제공해야 한다.",
+    "expected": [
+      "Platform"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Platform"
+    ],
+    "rules": [
+      {
+        "rule": "Platform",
+        "reason": "요구사항에서 Android와 iOS 간의 동일성 검증이 요구됨.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Platform"
+    ],
+    "elapsed_seconds": 5.157,
+    "status": "success"
+  },
+  "TC-005": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "만 14세 미만 사용자는 회원가입을 할 수 없다.",
+    "expected": [
+      "Business Rule",
+      "Boundary Value"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Business Rule",
+      "Boundary Value"
+    ],
+    "rules": [
+      {
+        "rule": "Business Rule",
+        "reason": "회원가입 정책 또는 업무 조건을 검증하는 경우",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Business Rule"
+    ],
+    "elapsed_seconds": 5.153,
+    "status": "success"
+  },
+  "TC-006": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "사용자가 로그아웃하면 로그인 화면으로 이동한다.",
+    "expected": [
+      "State Transition"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "State Transition"
+    ],
+    "rules": [
+      {
+        "rule": "State Transition",
+        "reason": "사용자가 로그아웃하면 로그인 화면으로 이동하는 것은 상태 변화를 의미한다.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "State Transition"
+    ],
+    "elapsed_seconds": 5.814,
+    "status": "success"
+  },
+  "TC-007": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "비밀번호가 올바르지 않은 경우 오류 메시지를 표시한다.",
+    "expected": [
+      "Negative Test"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Negative Test"
+    ],
+    "rules": [
+      {
+        "rule": "Negative Test",
+        "reason": "비밀번호가 올바르지 않은 경우 오류 메시지를 표시하는 것은 잘못된 입력 상황에 대한 반응을 검증하는 경우.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Negative Test"
+    ],
+    "elapsed_seconds": 6.345,
+    "status": "success"
+  },
+  "TC-008": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "비밀번호는 8자 이상 20자 이하이며 영문과 숫자를 포함해야 한다.",
+    "expected": [
+      "Validation",
+      "Boundary Value"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Validation",
+      "Boundary Value"
+    ],
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "비밀번호의 형식(영문과 숫자 포함) 및 길이(8~20자)를 검증하는 것이 해당 규칙의 핵심 검증 목적에 해당합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "elapsed_seconds": 6.873,
+    "status": "success"
+  },
+  "TC-009": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "이메일 형식이 올바르지 않으면 오류 메시지를 표시하고 가입을 진행할 수 없다.",
+    "expected": [
+      "Validation",
+      "Negative Test"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Validation",
+      "Negative Test"
+    ],
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "입력값의 형식을 검증하는 경우",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "elapsed_seconds": 4.584,
+    "status": "success"
+  },
+  "TC-010": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "사용자는 중복된 이메일로 회원가입할 수 없으며 중복 시 안내 메시지를 표시한다.",
+    "expected": [
+      "Business Rule",
+      "Negative Test"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Business Rule",
+      "Negative Test"
+    ],
+    "rules": [
+      {
+        "rule": "Negative Test",
+        "reason": "중복된 이메일 입력 시 시스템이 안내 메시지를 표시하는 반응을 검증해야 합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Negative Test"
+    ],
+    "elapsed_seconds": 5.975,
+    "status": "success"
+  },
+  "TC-011": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "게시글을 임시 저장한 후 다시 작성할 수 있으며 게시 완료 시 작성 상태가 변경된다.",
+    "expected": [
+      "State Transition"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "State Transition"
+    ],
+    "rules": [
+      {
+        "rule": "State Transition",
+        "reason": "게시글의 상태(임시 저장 -> 작성 중 -> 완료)이 변화하는 과정을 검증해야 합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "State Transition"
+    ],
+    "elapsed_seconds": 6.366,
+    "status": "success"
+  },
+  "TC-012": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "상품 정보를 수정하면 상품 상세 화면과 목록 화면에 변경된 정보가 반영되어야 한다.",
+    "expected": [
+      "No Applicable Rule"
+    ],
+    "difficulty": "Hard",
+    "categories": [
+      "No Applicable Rule"
+    ],
+    "rules": [
+      {
+        "rule": "State Transition",
+        "reason": "상품 정보를 수정하는 행위가 기존 상태에서 다른 상태(상세 화면/목록 화면)로 이동하는 과정을 검증해야 함.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "State Transition"
+    ],
+    "elapsed_seconds": 8.621,
+    "status": "success"
+  },
+  "TC-013": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "로그인 기능은 Web, Android, iOS에서 동일하게 제공되어야 한다.",
+    "expected": [
+      "Platform"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Platform"
+    ],
+    "rules": [
+      {
+        "rule": "Platform",
+        "reason": "요구사항에서 Web, Android, iOS 플랫폼 간 동일성 검증이 요구됨.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Platform"
+    ],
+    "elapsed_seconds": 5.777,
+    "status": "success"
+  },
+  "TC-014": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "로그인 실패가 5회 발생하면 추가 로그인을 제한한다.",
+    "expected": [
+      "Business Rule",
+      "Negative Test"
+    ],
+    "difficulty": "Hard",
+    "categories": [
+      "Business Rule",
+      "Negative Test"
+    ],
+    "rules": [
+      {
+        "rule": "Negative Test",
+        "reason": "로그인 실패가 5회 발생하는 상황을 시뮬레이션하여 시스템의 반응을 검증해야 함.",
+        "confidence": 0.8
+      },
+      {
+        "rule": "Business Rule",
+        "reason": "로그인 횟수 제한은 서비스 정책(업무 조건)에 해당하므로 Business Rule 적용.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Negative Test",
+      "Business Rule"
+    ],
+    "elapsed_seconds": 8.507,
+    "status": "success"
+  },
+  "TC-015": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "사용자가 필요한 정보를 모두 입력하지 않은 경우 다음 단계로 진행할 수 없어야 한다.",
+    "expected": [
+      "Validation",
+      "Negative Test"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Validation",
+      "Negative Test"
+    ],
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "입력값의 형식 또는 필수 여부를 검증하는 경우. 사용자가 정보를 모두 입력하지 않은 상태를 검증하는 것은 필수 입력 여부의 검증에 해당합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "elapsed_seconds": 6.971,
+    "status": "success"
+  },
+  "TC-016": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "정상적으로 인증된 사용자만 개인 정보를 조회할 수 있어야 한다.",
+    "expected": [
+      "Security"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Security"
+    ],
+    "rules": [
+      {
+        "rule": "Security",
+        "reason": "인증 및 권한 검증이 필요하며, 개인정보 보호가 핵심 조건이므로 Security 규칙이 적용됨.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Security"
+    ],
+    "elapsed_seconds": 6.342,
+    "status": "success"
+  },
+  "TC-017": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "결제가 완료된 주문은 다시 결제할 수 없어야 한다.",
+    "expected": [
+      "Business Rule"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Business Rule"
+    ],
+    "rules": [
+      {
+        "rule": "Business Rule",
+        "reason": "결제가 완료된 주문은 다시 결제할 수 없어야 한다는 정책을 검증합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "actual": [
+      "Business Rule"
+    ],
+    "elapsed_seconds": 6.991,
+    "status": "success"
+  },
+  "TC-018": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "화면 크기가 달라져도 주요 기능을 동일하게 사용할 수 있어야 한다.",
+    "expected": [
+      "No Applicable Rule"
+    ],
+    "difficulty": "Hard",
+    "categories": [
+      "No Applicable Rule"
+    ],
+    "rules": [
+      {
+        "rule": "No Applicable Rule",
+        "reason": "요구사항은 입력값의 형식 또는 필수 여부, 최소값, 최대값, 범위, 정책, 상태 이동, 플랫폼, 인증, 권한, 개인정보 보호와 직접 관련이 없음.",
+        "confidence": 0.0
+      }
+    ],
+    "actual": [
+      "No Applicable Rule"
+    ],
+    "elapsed_seconds": 8.394,
+    "status": "success"
+  },
+  "TC-019": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "기존 회원의 프로필 변경 이후 관련 화면에서도 변경된 정보가 동일하게 표시되어야 한다.",
+    "expected": [
+      "No Applicable Rule"
+    ],
+    "difficulty": "Hard",
+    "categories": [
+      "No Applicable Rule"
+    ],
+    "rules": [
+      {
+        "rule": "No Applicable Rule",
+        "reason": "요구사항은 입력값의 형식 또는 필수 여부, 범위, 정책, 상태 변화, 플랫폼 차이, 인증, 권한, 개인정보 보호 등과 직접 관련이 없음.",
+        "confidence": 0.0
+      }
+    ],
+    "actual": [
+      "No Applicable Rule"
+    ],
+    "elapsed_seconds": 8.43,
+    "status": "success"
+  },
+  "TC-020": {
+    "model": "qwen3:1.7b",
+    "prompt_type": "compressed_schema",
+    "requirement": "사용자가 이전 단계로 돌아간 후 다시 다음 단계로 이동해도 입력한 정보가 유지되어야 한다.",
+    "expected": [
+      "State Transition"
+    ],
+    "difficulty": "Hard",
+    "categories": [
+      "State Transition"
+    ],
+    "rules": [
+      {
+        "rule": "State Transition",
+        "reason": "사용자가 이전 단계로 돌아간 후 다시 다음 단계로 이동해도 입력 정보가 유지되어야 한다는 요구사항은 상태 이동을 검증하는 데 해당합니다.",
+        "confidence": 0.8
+      }
+    ],
+    "actual": [
+      "State Transition"
+    ],
+    "elapsed_seconds": 7.589,
+    "status": "success"
+  }
+}

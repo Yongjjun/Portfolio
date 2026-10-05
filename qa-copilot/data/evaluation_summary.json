@@ -1,0 +1,84 @@
+{
+  "overall": {
+    "total_cases": 20,
+    "executed_cases": 2,
+    "success_cases": 1,
+    "api_errors": 1,
+    "not_executed": 18,
+    "exact_count": 1,
+    "over_selection_count": 0,
+    "under_selection_count": 0,
+    "mixed_error_count": 0,
+    "exact_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "difficulty": {
+    "Easy": {
+      "total_cases": 6,
+      "executed_cases": 2,
+      "success_cases": 1,
+      "api_errors": 1,
+      "not_executed": 4,
+      "exact_count": 1,
+      "over_selection_count": 0,
+      "under_selection_count": 0,
+      "mixed_error_count": 0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "exact_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "Medium": {
+      "total_cases": 9,
+      "executed_cases": 0,
+      "success_cases": 0,
+      "api_errors": 0,
+      "not_executed": 9,
+      "exact_count": 0,
+      "over_selection_count": 0,
+      "under_selection_count": 0,
+      "mixed_error_count": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "exact_accuracy": null,
+      "precision": null,
+      "recall": null,
+      "f1_score": null
+    },
+    "Hard": {
+      "total_cases": 5,
+      "executed_cases": 0,
+      "success_cases": 0,
+      "api_errors": 0,
+      "not_executed": 5,
+      "exact_count": 0,
+      "over_selection_count": 0,
+      "under_selection_count": 0,
+      "mixed_error_count": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "exact_accuracy": null,
+      "precision": null,
+      "recall": null,
+      "f1_score": null
+    }
+  },
+  "rules": {
+    "Boundary Value": {
+      "expected_count": 1,
+      "selected_count": 1,
+      "correct_count": 1,
+      "missing_count": 0,
+      "extra_count": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  }
+}
