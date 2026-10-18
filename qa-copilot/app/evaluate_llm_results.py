@@ -36,7 +36,15 @@ RESULT_FILES = {
     "ollama": (
         DATA_DIR
         / "ollama_qwen3_1.7b_schema_results.json"
+        
     ),
+
+    "ollama_v3": (
+    DATA_DIR
+    / "ollama_qwen3_1.7b_v3_results.json"
+),
+
+    
 }
 
 
@@ -81,7 +89,7 @@ def get_provider():
         )
 
         print(
-            "사용 가능: gemini, ollama"
+                "사용 가능: gemini, ollama, ollama_v3"
         )
 
         sys.exit(1)
