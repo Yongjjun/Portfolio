@@ -1,0 +1,658 @@
+{
+  "TC-001": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "비밀번호는 최소 8자 이상이어야 한다.",
+    "expected": [
+      "Boundary Value"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Boundary Value"
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "비밀번호의 형식(8자 이상)을 검증하는 것은 입력값의 형식을 검증하는 경우에 해당합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"Validation\", \"reason\": \"비밀번호의 형식(8자 이상)을 검증하는 것은 입력값의 형식을 검증하는 경우에 해당합니다.\", \"confidence\": 0.9} ]",
+    "done_reason": "stop",
+    "elapsed_seconds": 4.265
+  },
+  "TC-002": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "이메일 주소는 올바른 형식으로 입력해야 한다.",
+    "expected": [
+      "Validation"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Validation"
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "이메일 형식 검증은 입력값의 형식을 검증하는 데 해당합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"Validation\", \"reason\": \"이메일 형식 검증은 입력값의 형식을 검증하는 데 해당합니다.\", \"confidence\": 0.9} ]",
+    "done_reason": "stop",
+    "elapsed_seconds": 3.993
+  },
+  "TC-003": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "이름은 필수 입력 항목이다.",
+    "expected": [
+      "Validation"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Validation"
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "이름 필수 입력 항목은 입력값의 필수 여부를 검증하는 데 해당합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"Validation\", \"reason\": \"이름 필수 입력 항목은 입력값의 필수 여부를 검증하는 데 해당합니다.\", \"confidence\": 0.9} ]",
+    "done_reason": "stop",
+    "elapsed_seconds": 3.971
+  },
+  "TC-004": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "Android와 iOS에서 동일한 기능을 제공해야 한다.",
+    "expected": [
+      "Platform"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Platform"
+    ],
+    "actual": [
+      "Platform"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Platform",
+        "reason": "요구사항에서 Android와 iOS 간의 동일성 검증이 요구됨.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"Platform\", \"reason\": \"요구사항에서 Android와 iOS 간의 동일성 검증이 요구됨.\", \"confidence\": 0.9}]",
+    "done_reason": "stop",
+    "elapsed_seconds": 3.968
+  },
+  "TC-005": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "만 14세 미만 사용자는 회원가입을 할 수 없다.",
+    "expected": [
+      "Business Rule",
+      "Boundary Value"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Business Rule",
+      "Boundary Value"
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "입력값의 형식(연령)을 검증하는 경우.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"Validation\", \"reason\": \"입력값의 형식(연령)을 검증하는 경우.\", \"confidence\": 0.9} ]",
+    "done_reason": "stop",
+    "elapsed_seconds": 3.853
+  },
+  "TC-006": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "사용자가 로그아웃하면 로그인 화면으로 이동한다.",
+    "expected": [
+      "State Transition"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "State Transition"
+    ],
+    "actual": [
+      "State Transition"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "State Transition",
+        "reason": "로그인 화면으로 이동하는 이벤트는 상태 변화를 의미합니다. 로그아웃 시 상태가 로그인 상태로 전환하는 것을 검증해야 합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"State Transition\", \"reason\": \"로그인 화면으로 이동하는 이벤트는 상태 변화를 의미합니다. 로그아웃 시 상태가 로그인 상태로 전환하는 것을 검증해야 합니다.\", \"confidence\": 0.9} ]",
+    "done_reason": "stop",
+    "elapsed_seconds": 4.792
+  },
+  "TC-007": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "비밀번호가 올바르지 않은 경우 오류 메시지를 표시한다.",
+    "expected": [
+      "Negative Test"
+    ],
+    "difficulty": "Easy",
+    "categories": [
+      "Negative Test"
+    ],
+    "actual": [
+      "Validation",
+      "Negative Test"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "비밀번호 형식 또는 필수 여부를 검증하는 경우",
+        "confidence": 0.9
+      },
+      {
+        "rule": "Negative Test",
+        "reason": "잘못된 입력 상황에 대한 시스템 반응을 검증하는 경우",
+        "confidence": 0.8
+      }
+    ],
+    "raw_response": "[\n  {\n    \"rule\": \"Validation\",\n    \"reason\": \"비밀번호 형식 또는 필수 여부를 검증하는 경우\",\n    \"confidence\": 0.9\n  },\n  {\n    \"rule\": \"Negative Test\",\n    \"reason\": \"잘못된 입력 상황에 대한 시스템 반응을 검증하는 경우\",\n    \"confidence\": 0.8\n  }\n]",
+    "done_reason": "stop",
+    "elapsed_seconds": 5.424
+  },
+  "TC-008": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "비밀번호는 8자 이상 20자 이하이며 영문과 숫자를 포함해야 한다.",
+    "expected": [
+      "Validation",
+      "Boundary Value"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Validation",
+      "Boundary Value"
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "비밀번호의 형식(8~20자, 영문 숫자 포함)을 검증하는 것이 필요하다.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"Validation\", \"reason\": \"비밀번호의 형식(8~20자, 영문 숫자 포함)을 검증하는 것이 필요하다.\", \"confidence\": 0.9} ]",
+    "done_reason": "stop",
+    "elapsed_seconds": 4.309
+  },
+  "TC-009": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "이메일 형식이 올바르지 않으면 오류 메시지를 표시하고 가입을 진행할 수 없다.",
+    "expected": [
+      "Validation",
+      "Negative Test"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Validation",
+      "Negative Test"
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "이메일 형식 검증은 입력값의 형식을 검증하는 데 해당합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"Validation\", \"reason\": \"이메일 형식 검증은 입력값의 형식을 검증하는 데 해당합니다.\", \"confidence\": 0.9} ]",
+    "done_reason": "stop",
+    "elapsed_seconds": 4.124
+  },
+  "TC-010": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "사용자는 중복된 이메일로 회원가입할 수 없으며 중복 시 안내 메시지를 표시한다.",
+    "expected": [
+      "Business Rule",
+      "Negative Test"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Business Rule",
+      "Negative Test"
+    ],
+    "actual": [
+      "Validation",
+      "Negative Test"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "입력값의 형식(이메일)을 검증하여 중복 이메일을 판별하는 데 사용됩니다.",
+        "confidence": 0.9
+      },
+      {
+        "rule": "Negative Test",
+        "reason": "중복 이메일 입력 시 시스템이 안내 메시지를 표시하는 반응을 검증합니다.",
+        "confidence": 0.8
+      }
+    ],
+    "raw_response": "[{\"rule\":\"Validation\",\"reason\":\"입력값의 형식(이메일)을 검증하여 중복 이메일을 판별하는 데 사용됩니다.\",\"confidence\":0.9},{\"rule\":\"Negative Test\",\"reason\":\"중복 이메일 입력 시 시스템이 안내 메시지를 표시하는 반응을 검증합니다.\",\"confidence\":0.8}]",
+    "done_reason": "stop",
+    "elapsed_seconds": 5.23
+  },
+  "TC-011": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "게시글을 임시 저장한 후 다시 작성할 수 있으며 게시 완료 시 작성 상태가 변경된다.",
+    "expected": [
+      "State Transition"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "State Transition"
+    ],
+    "actual": [
+      "State Transition"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "State Transition",
+        "reason": "게시 완료 시 작성 상태가 변경되는 상태 변화를 검증한다.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"State Transition\", \"reason\": \"게시 완료 시 작성 상태가 변경되는 상태 변화를 검증한다.\", \"confidence\": 0.9}]",
+    "done_reason": "stop",
+    "elapsed_seconds": 3.914
+  },
+  "TC-012": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "상품 정보를 수정하면 상품 상세 화면과 목록 화면에 변경된 정보가 반영되어야 한다.",
+    "expected": [
+      "No Applicable Rule"
+    ],
+    "difficulty": "Hard",
+    "categories": [
+      "No Applicable Rule"
+    ],
+    "actual": [
+      "Validation",
+      "State Transition"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "입력값의 형식 또는 필수 여부를 검증해야 함. 예: 상품 정보의 필수 필드가 입력되었는지 확인.",
+        "confidence": 0.9
+      },
+      {
+        "rule": "State Transition",
+        "reason": "상품 정보를 수정하는 행위가 발생했을 때, 상품 상세 화면과 목록 화면의 상태가 변화해야 함.",
+        "confidence": 0.8
+      }
+    ],
+    "raw_response": "[{\"rule\":\"Validation\",\"reason\":\"입력값의 형식 또는 필수 여부를 검증해야 함. 예: 상품 정보의 필수 필드가 입력되었는지 확인.\",\"confidence\":0.9},{\"rule\":\"State Transition\",\"reason\":\"상품 정보를 수정하는 행위가 발생했을 때, 상품 상세 화면과 목록 화면의 상태가 변화해야 함.\",\"confidence\":0.8}]",
+    "done_reason": "stop",
+    "elapsed_seconds": 5.63
+  },
+  "TC-013": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "로그인 기능은 Web, Android, iOS에서 동일하게 제공되어야 한다.",
+    "expected": [
+      "Platform"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Platform"
+    ],
+    "actual": [
+      "Platform"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Platform",
+        "reason": "요구사항에서 Web, Android, iOS 플랫폼 간 동일성 검증이 요구됨.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"Platform\", \"reason\": \"요구사항에서 Web, Android, iOS 플랫폼 간 동일성 검증이 요구됨.\", \"confidence\": 0.9} ]",
+    "done_reason": "stop",
+    "elapsed_seconds": 4.065
+  },
+  "TC-014": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "로그인 실패가 5회 발생하면 추가 로그인을 제한한다.",
+    "expected": [
+      "Business Rule",
+      "Negative Test"
+    ],
+    "difficulty": "Hard",
+    "categories": [
+      "Business Rule",
+      "Negative Test"
+    ],
+    "actual": [
+      "Business Rule"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Business Rule",
+        "reason": "로그인 실패 횟수를 기준으로 정책을 적용하는 것이 서비스 정책에 해당한다.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"Business Rule\", \"reason\": \"로그인 실패 횟수를 기준으로 정책을 적용하는 것이 서비스 정책에 해당한다.\", \"confidence\": 0.9}]",
+    "done_reason": "stop",
+    "elapsed_seconds": 4.056
+  },
+  "TC-015": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "사용자가 필요한 정보를 모두 입력하지 않은 경우 다음 단계로 진행할 수 없어야 한다.",
+    "expected": [
+      "Validation",
+      "Negative Test"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Validation",
+      "Negative Test"
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "입력값의 형식 또는 필수 여부를 검증하는 경우. 요구사항에서 '모든 정보를 입력하지 않은 경우 진행할 수 없어야 한다'는 문장에서, 필수 입력 여부가 핵심이므로 Validation 적용.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\": \"Validation\", \"reason\": \"입력값의 형식 또는 필수 여부를 검증하는 경우. 요구사항에서 '모든 정보를 입력하지 않은 경우 진행할 수 없어야 한다'는 문장에서, 필수 입력 여부가 핵심이므로 Validation 적용.\", \"confidence\": 0.9}]",
+    "done_reason": "stop",
+    "elapsed_seconds": 4.917
+  },
+  "TC-016": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "정상적으로 인증된 사용자만 개인 정보를 조회할 수 있어야 한다.",
+    "expected": [
+      "Security"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Security"
+    ],
+    "actual": [
+      "Business Rule"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Business Rule",
+        "reason": "요구사항은 '정상적으로 인증된 사용자만 개인 정보를 조회할 수 있어야 한다'는 서비스 정책을 의미합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[\n  {\n    \"rule\": \"Business Rule\",\n    \"reason\": \"요구사항은 '정상적으로 인증된 사용자만 개인 정보를 조회할 수 있어야 한다'는 서비스 정책을 의미합니다.\",\n    \"confidence\": 0.9\n  }\n]",
+    "done_reason": "stop",
+    "elapsed_seconds": 4.543
+  },
+  "TC-017": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "결제가 완료된 주문은 다시 결제할 수 없어야 한다.",
+    "expected": [
+      "Business Rule"
+    ],
+    "difficulty": "Medium",
+    "categories": [
+      "Business Rule"
+    ],
+    "actual": [
+      "Business Rule"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Business Rule",
+        "reason": "결제가 완료된 주문은 다시 결제할 수 없어야 한다는 조건은 서비스 정책을 반영한 Business Rule에 해당합니다.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\":\"Business Rule\",\"reason\":\"결제가 완료된 주문은 다시 결제할 수 없어야 한다는 조건은 서비스 정책을 반영한 Business Rule에 해당합니다.\",\"confidence\":0.9} ]",
+    "done_reason": "stop",
+    "elapsed_seconds": 4.292
+  },
+  "TC-018": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "화면 크기가 달라져도 주요 기능을 동일하게 사용할 수 있어야 한다.",
+    "expected": [
+      "No Applicable Rule"
+    ],
+    "difficulty": "Hard",
+    "categories": [
+      "No Applicable Rule"
+    ],
+    "actual": [
+      "State Transition"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "State Transition",
+        "reason": "화면 크기 변경 시 상태 변화를 검증해야 하며, 시스템이 원하는 상태로 이동하는지 확인해야 합니다.",
+        "confidence": 0.8
+      }
+    ],
+    "raw_response": "[{\"rule\": \"State Transition\", \"reason\": \"화면 크기 변경 시 상태 변화를 검증해야 하며, 시스템이 원하는 상태로 이동하는지 확인해야 합니다.\", \"confidence\": 0.8}]",
+    "done_reason": "stop",
+    "elapsed_seconds": 4.277
+  },
+  "TC-019": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "기존 회원의 프로필 변경 이후 관련 화면에서도 변경된 정보가 동일하게 표시되어야 한다.",
+    "expected": [
+      "No Applicable Rule"
+    ],
+    "difficulty": "Hard",
+    "categories": [
+      "No Applicable Rule"
+    ],
+    "actual": [
+      "Validation",
+      "Equivalence Partition"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "입력값의 형식 또는 필수 여부가 핵심이므로 이메일 형식 검증이 필요하다.",
+        "confidence": 0.9
+      },
+      {
+        "rule": "Equivalence Partition",
+        "reason": "프로필 정보의 유효/무효 분류를 위해 입력값을 대표 그룹으로 나누어 검증한다.",
+        "confidence": 0.8
+      }
+    ],
+    "raw_response": "[{\"rule\":\"Validation\",\"reason\":\"입력값의 형식 또는 필수 여부가 핵심이므로 이메일 형식 검증이 필요하다.\",\"confidence\":0.9},{\"rule\":\"Equivalence Partition\",\"reason\":\"프로필 정보의 유효/무효 분류를 위해 입력값을 대표 그룹으로 나누어 검증한다.\",\"confidence\":0.8}]",
+    "done_reason": "stop",
+    "elapsed_seconds": 5.439
+  },
+  "TC-020": {
+    "model": "qwen3:1.7b",
+    "experiment": "controlled_v4",
+    "requirement": "사용자가 이전 단계로 돌아간 후 다시 다음 단계로 이동해도 입력한 정보가 유지되어야 한다.",
+    "expected": [
+      "State Transition"
+    ],
+    "difficulty": "Hard",
+    "categories": [
+      "State Transition"
+    ],
+    "actual": [
+      "Validation"
+    ],
+    "status": "success",
+    "settings": {
+      "temperature": 0.1,
+      "num_predict": 384,
+      "num_gpu": 0
+    },
+    "rules": [
+      {
+        "rule": "Validation",
+        "reason": "입력값의 형식 또는 필수 여부를 검증해야 함. 예: 입력값이 유효한 문자열인지 확인.",
+        "confidence": 0.9
+      }
+    ],
+    "raw_response": "[{\"rule\":\"Validation\",\"reason\":\"입력값의 형식 또는 필수 여부를 검증해야 함. 예: 입력값이 유효한 문자열인지 확인.\",\"confidence\":0.9} ]",
+    "done_reason": "stop",
+    "elapsed_seconds": 4.24
+  }
+}

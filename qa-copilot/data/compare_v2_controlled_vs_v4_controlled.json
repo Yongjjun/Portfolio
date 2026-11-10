@@ -1,0 +1,70 @@
+{
+  "providers": [
+    "v2_controlled",
+    "v4_controlled"
+  ],
+  "common_valid_cases": 19,
+  "exact": {
+    "v2_controlled": 9,
+    "v4_controlled": 7
+  },
+  "changed_cases": [
+    {
+      "id": "TC-008",
+      "expected": [
+        "Validation",
+        "Boundary Value"
+      ],
+      "v2_controlled": [
+        "Validation",
+        "Boundary Value"
+      ],
+      "v4_controlled": [
+        "Validation"
+      ],
+      "winner": "v2_controlled"
+    },
+    {
+      "id": "TC-011",
+      "expected": [
+        "State Transition"
+      ],
+      "v2_controlled": [
+        "Validation",
+        "State Transition"
+      ],
+      "v4_controlled": [
+        "State Transition"
+      ],
+      "winner": "v4_controlled"
+    },
+    {
+      "id": "TC-014",
+      "expected": [
+        "Business Rule",
+        "Negative Test"
+      ],
+      "v2_controlled": [
+        "Negative Test",
+        "Business Rule"
+      ],
+      "v4_controlled": [
+        "Business Rule"
+      ],
+      "winner": "v2_controlled"
+    },
+    {
+      "id": "TC-018",
+      "expected": [
+        "No Applicable Rule"
+      ],
+      "v2_controlled": [
+        "No Applicable Rule"
+      ],
+      "v4_controlled": [
+        "State Transition"
+      ],
+      "winner": "v2_controlled"
+    }
+  ]
+}

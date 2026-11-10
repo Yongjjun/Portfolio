@@ -254,7 +254,7 @@ def call_ollama(prompt: str):
 
         "options": {
             "temperature": 0.1,
-            "num_predict": 120,
+            "num_predict": 512,
 
             # 현재 PC 환경에서는 GPU 일부 사용 시
             # runner crash가 발생했으므로 CPU-only 실행

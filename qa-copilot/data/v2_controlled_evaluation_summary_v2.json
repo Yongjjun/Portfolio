@@ -1,0 +1,155 @@
+{
+  "provider": "v2_controlled",
+  "dataset_cases": 20,
+  "attempted": 20,
+  "valid": 19,
+  "failed": 1,
+  "not_executed": 0,
+  "valid_output_rate": 0.95,
+  "error_types": {
+    "output_validation_error": 1
+  },
+  "exact": 9,
+  "over_selection": 2,
+  "under_selection": 3,
+  "mixed_error": 5,
+  "exact_accuracy": 0.47368421052631576,
+  "precision": 0.7083333333333334,
+  "recall": 0.68,
+  "f1": 0.6938775510204083,
+  "tp": 17,
+  "fp": 7,
+  "fn": 8,
+  "difficulty": {
+    "Easy": {
+      "valid": 6,
+      "mixed_error": 2,
+      "exact": 4,
+      "accuracy": 0.6666666666666666
+    },
+    "Medium": {
+      "valid": 9,
+      "under_selection": 3,
+      "exact": 3,
+      "mixed_error": 2,
+      "over_selection": 1,
+      "accuracy": 0.3333333333333333
+    },
+    "Hard": {
+      "valid": 4,
+      "mixed_error": 1,
+      "exact": 2,
+      "over_selection": 1,
+      "accuracy": 0.5
+    }
+  },
+  "composition": {
+    "single": {
+      "valid": 13,
+      "mixed_error": 4,
+      "exact": 7,
+      "over_selection": 2,
+      "accuracy": 0.5384615384615384
+    },
+    "multi": {
+      "valid": 6,
+      "under_selection": 3,
+      "exact": 2,
+      "mixed_error": 1,
+      "accuracy": 0.3333333333333333
+    }
+  },
+  "rules": {
+    "Validation": {
+      "selected": 10,
+      "extra": 5,
+      "expected": 5,
+      "correct": 5,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "Boundary Value": {
+      "expected": 3,
+      "missing": 2,
+      "correct": 1,
+      "selected": 1,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5
+    },
+    "Equivalence Partition": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "Negative Test": {
+      "expected": 5,
+      "missing": 3,
+      "correct": 2,
+      "selected": 2,
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714285714285715
+    },
+    "Business Rule": {
+      "expected": 4,
+      "correct": 3,
+      "selected": 4,
+      "missing": 1,
+      "extra": 1,
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75
+    },
+    "State Transition": {
+      "expected": 3,
+      "correct": 3,
+      "selected": 4,
+      "extra": 1,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571
+    },
+    "Regression": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "Platform": {
+      "expected": 2,
+      "correct": 2,
+      "selected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Accessibility": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "Security": {
+      "expected": 1,
+      "missing": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "No Applicable Rule": {
+      "expected": 2,
+      "missing": 1,
+      "correct": 1,
+      "selected": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    }
+  },
+  "latency": {
+    "count": 19,
+    "avg": 3.856684210526316,
+    "min": 2.997,
+    "max": 5.482
+  }
+}
